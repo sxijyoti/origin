@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>origin</title>
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <div id="clock">
+        <span id="time">00:00:00</span>
+        <span id="date"></span>
+      </div>
+      <span id="greeting"></span>
+    </header>
+
+    <main id="main">
+      <aside id="sidebar">
+        <section class="widget" id="bookmarks-widget">
+          <h2>bookmarks</h2>
+          <div id="bookmarks"></div>
+        </section>
+      </aside>
+
+      <section id="terminal-widget" class="widget">
+        <h2>terminal <span class="hint">type 'help'</span></h2>
+        <div id="terminal">
+          <div id="output"></div>
+          <div id="input-line">
+            <span class="prompt">›</span>
+            <input type="text" id="input" autocomplete="off" spellcheck="false" autofocus>
+          </div>
+        </div>
+      </section>
+
+      <aside id="sidebar-right">
+        <section class="widget" id="todos-widget">
+          <h2>today <span id="todo-date"></span></h2>
+          <div id="todos"></div>
+        </section>
+        <section class="widget" id="notes-widget">
+          <h2>notes</h2>
+          <div id="notes"></div>
+        </section>
+      </aside>
+    </main>
+
+    <footer id="footer">
+      <div id="stats">
+        <span id="stat-tabs">tabs: 0</span>
+        <span id="stat-saved">saved: 0</span>
+        <span id="stat-visited">visited: 0</span>
+      </div>
+      <div id="keys">
+        <kbd>↑↓</kbd> history
+        <kbd>Tab</kbd> complete
+        <kbd>Esc</kbd> clear
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="newtab.js"></script>
+</body>
+</html>
